@@ -1,0 +1,225 @@
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 08:41:06] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 08:41:23] "GET /items HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 09:17:45] "GET /items HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 09:17:53] "[33mGET /houses HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 09:18:58] "GET /houses HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 09:19:22] "GET /house/church HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 09:19:42] "[33mGET /house/items HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 09:19:48] "GET /items HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 09:20:04] "GET /item/crucifix HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 09:20:32] "[33mGET /item/church HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 09:20:47] "[31m[1mGET /collect-item/church HTTP/1.1[0m" 405 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 09:23:00] "[31m[1mGET /collect-item/church HTTP/1.1[0m" 405 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 09:32:49] "[31m[1mGET /collect-item/church HTTP/1.1[0m" 405 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 09:36:13] "[31m[1mGET /collect-item/church HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 09:36:14] "[31m[1mGET /collect-item/church HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 09:37:06] "POST /collect-item/Village%20Hall HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 09:42:13] "POST /collect-item/Village%20Hall HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 09:42:33] "GET /status HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 09:57:19] "[33mGET /locations HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 09:57:19] "GET /houses HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 09:57:19] "GET /status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 09:59:24] "[33mGET /locations HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 09:59:24] "GET /status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 09:59:24] "GET /houses HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 10:00:24] "[33mGET /locations HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 10:00:24] "GET /status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 10:00:24] "GET /houses HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 10:00:35] "[33mGET /locations HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 10:00:35] "GET /status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 10:00:35] "GET /houses HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 10:00:55] "[33mGET /locations HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 10:00:55] "GET /houses HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 10:00:55] "GET /status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 10:01:14] "[33mGET /locations HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 10:01:14] "GET /status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 10:01:14] "GET /houses HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 10:01:17] "[33mGET /locations HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 10:01:17] "GET /status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 10:01:17] "GET /houses HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 10:02:11] "[33mGET /locations HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 10:02:11] "GET /status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 10:02:11] "GET /houses HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 10:06:08] "GET /status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 10:06:08] "GET /houses HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 10:06:49] "GET /status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 10:06:49] "GET /houses HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 10:08:04] "GET /status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 10:08:04] "GET /houses HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 10:39:38] "GET /status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 10:39:38] "GET /houses HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 10:40:27] "GET /status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 10:40:27] "GET /houses HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 11:49:25] "GET /status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 11:49:25] "GET /houses HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 11:50:36] "GET /status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 11:50:36] "GET /houses HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 11:50:38] "OPTIONS /collect-item/Village%20Hall HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 11:50:38] "POST /collect-item/Village%20Hall HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 11:50:38] "GET /status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 11:52:02] "GET /status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 11:52:02] "GET /houses HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 13:32:15] "GET /status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 13:32:15] "GET /houses HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 14:06:58] "GET /status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 14:06:58] "GET /houses HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 15:09:58] "GET /status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 15:09:58] "GET /houses HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 16:16:01] "GET /status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 16:16:01] "GET /houses HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 16:23:37] "GET /status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 16:23:37] "GET /houses HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 16:27:14] "GET /status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 16:27:14] "GET /houses HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 16:28:33] "GET /status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 16:28:33] "GET /houses HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 16:29:07] "OPTIONS /collect-item/Gift%20Shop HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 16:29:07] "POST /collect-item/Gift%20Shop HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 16:29:07] "GET /status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 16:31:20] "OPTIONS /collect-item/Grocery%20Store HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 16:31:20] "POST /collect-item/Grocery%20Store HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 16:31:20] "GET /status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 16:33:22] "GET /status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 16:33:22] "GET /houses HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 16:33:30] "OPTIONS /collect-item/Village%20Hall HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 16:33:30] "POST /collect-item/Village%20Hall HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 16:33:30] "GET /status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 16:34:16] "GET /houses HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 16:34:16] "GET /status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 16:36:14] "GET /status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 16:36:14] "GET /houses HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 16:43:42] "GET /status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 16:43:42] "GET /houses HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 16:44:53] "GET /status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 16:44:53] "GET /houses HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 16:45:18] "GET /status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 16:45:18] "GET /houses HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 16:45:47] "GET /status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 16:45:47] "GET /houses HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 16:46:07] "GET /status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 16:46:07] "GET /houses HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 16:46:21] "GET /status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 16:46:21] "GET /houses HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 16:50:41] "GET /status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 16:50:41] "GET /houses HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 16:52:39] "GET /status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 16:52:39] "GET /houses HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 16:53:21] "GET /status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 16:53:21] "GET /houses HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 16:54:02] "GET /status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 16:54:02] "GET /houses HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 16:54:23] "GET /status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 16:54:23] "GET /houses HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 16:54:35] "GET /status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 16:54:35] "GET /houses HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 16:54:51] "GET /status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 16:54:51] "GET /houses HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 16:55:02] "GET /status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 16:55:02] "GET /houses HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 16:55:28] "GET /status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 16:55:28] "GET /houses HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 16:55:50] "GET /status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 16:55:50] "GET /houses HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 16:56:02] "GET /status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 16:56:02] "GET /houses HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 16:59:56] "GET /status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 16:59:56] "GET /houses HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 17:05:29] "GET /status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 17:05:29] "GET /houses HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 17:05:39] "GET /status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 17:05:39] "GET /houses HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 17:05:47] "GET /status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 17:05:47] "GET /houses HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 17:13:40] "GET /status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 17:13:40] "GET /houses HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 17:14:53] "GET /status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 17:14:53] "GET /houses HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 17:16:22] "GET /status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 17:16:22] "GET /houses HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 17:17:20] "OPTIONS /collect-item/Village%20Hall HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 17:17:20] "POST /collect-item/Village%20Hall HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 17:17:20] "GET /status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 17:19:29] "GET /status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 17:19:29] "GET /houses HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 17:19:40] "GET /status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 17:19:40] "GET /houses HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 17:20:03] "GET /status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 17:20:03] "GET /houses HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 17:22:44] "GET /status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 17:22:44] "GET /houses HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 17:25:33] "GET /status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 17:25:33] "GET /houses HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 17:25:38] "GET /status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 17:25:38] "GET /houses HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 17:27:28] "GET /status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 17:27:28] "GET /houses HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [12/Oct/2024 22:54:05] "GET /status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Oct/2024 22:54:05] "GET /houses HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Oct/2024 22:54:10] "OPTIONS /collect-item/Village%20Hall HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Oct/2024 22:54:10] "POST /collect-item/Village%20Hall HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Oct/2024 22:54:10] "GET /status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Oct/2024 22:56:31] "OPTIONS /collect-item/Church HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Oct/2024 22:56:31] "POST /collect-item/Church HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Oct/2024 22:56:31] "GET /status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Oct/2024 23:00:00] "OPTIONS /collect-item/Hospital HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Oct/2024 23:00:00] "POST /collect-item/Hospital HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Oct/2024 23:00:00] "GET /status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Oct/2024 23:03:01] "GET /status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Oct/2024 23:03:01] "GET /houses HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Oct/2024 23:03:19] "GET /houses HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Oct/2024 23:03:19] "GET /status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Oct/2024 23:03:21] "GET /status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Oct/2024 23:03:21] "GET /houses HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Oct/2024 23:04:28] "OPTIONS /collect-item/Grocery%20Store HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Oct/2024 23:04:28] "POST /collect-item/Grocery%20Store HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Oct/2024 23:04:28] "GET /status HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 22:51:58] "GET /status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 22:51:58] "GET /houses HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 22:52:00] "OPTIONS /collect-item/Village%20Hall HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 22:52:00] "POST /collect-item/Village%20Hall HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 22:52:00] "GET /status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 22:53:25] "OPTIONS /collect-item/Church HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 22:53:25] "POST /collect-item/Church HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 22:53:25] "GET /status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 22:54:03] "OPTIONS /collect-item/Gift%20Shop HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 22:54:03] "POST /collect-item/Gift%20Shop HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 22:54:03] "GET /status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 22:54:45] "OPTIONS /collect-item/Grocery%20Store HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 22:54:45] "POST /collect-item/Grocery%20Store HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 22:54:45] "GET /status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 23:03:36] "OPTIONS /collect-item/Village%20Hall HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 23:03:36] "POST /collect-item/Village%20Hall HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 23:03:36] "GET /status HTTP/1.1" 200 -

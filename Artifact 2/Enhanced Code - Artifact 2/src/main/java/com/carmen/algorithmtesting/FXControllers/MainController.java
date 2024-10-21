@@ -48,7 +48,7 @@ public class MainController {
     private int completedAlgorithms = 0; // To track how many algorithms have finished
 
     //labels, textArea and buttons
-    private TextArea textArea = new TextArea();
+    private TextArea textArea;
     @FXML private Text topAlertText;
     private Button buttonArrayList;
     private Button buttonLinkedList;
@@ -88,8 +88,9 @@ public class MainController {
     //constructor
     public MainController() {
         algorithmsHandler = new AlgorithmsHandler(this);
-        dataHandler = new DataHandler();
+        dataHandler = new DataHandler(this);
         globalUI = new GlobalUI();
+        textArea = new TextArea();
     }
 
     //initialization
@@ -215,6 +216,7 @@ public class MainController {
             //call function to search the element
             if (!searchBox.getValue().equalsIgnoreCase("select a course")) {
 
+                //display algorithms
                 searchCourseByCourseNumber(searchBox.getValue(), list);
             }
         });
@@ -272,6 +274,7 @@ public class MainController {
 
         //add to main pane
         centerSection.getChildren().clear();
+        centerSection.getChildren().add(textArea);
         centerSection.getChildren().addAll(algorithmsHolderBox);
 
         /*
@@ -693,6 +696,7 @@ public class MainController {
 
         //add to main pane
         centerSection.getChildren().clear();
+        centerSection.getChildren().add(textArea);
         centerSection.getChildren().addAll(sortAlgorithmsHolderBox);
 
 
@@ -713,25 +717,43 @@ public class MainController {
             String name2 = "Selection Sort";
             String name3 = "Quick Sort";
 
-            String complexity1 = "Complexity :  O(N)";
-            String complexity2 = "Complexity :  O(N)";
-            String complexity3 = "Complexity :  O(N)";
+            String complexity1 = "Complexity :  O(N^2)";
+            String complexity2 = "Complexity :  O(N^2)";
+            String complexity3 = "Complexity :  O(N log N)";
 
-            String memory1 = "soon1";
-            String memory2 = "soon2";
-            String memory3 = "soon3";
 
             //call globalUI setters to set the result boxes values
-            setRuntimeForSorting(courseList, globalUI.getRuntime1()); //set runtime1
-            setRuntimeForSorting(courseList, globalUI.getRuntime2()); //set runtime2
-            setRuntimeForSorting(courseList, globalUI.getRuntime3()); //set runtime3
-            globalUI.getMemory1().setText(memory1); //set memory 1
-            globalUI.getMemory2().setText(memory2); //set memory 2
-            globalUI.getMemory3().setText(memory3); //set memory 3
+            setRuntimeForSorting(algorithmsHandler.insertionSort(courseList), globalUI.getRuntime1()); //set runtime1
+            setRuntimeForSorting(algorithmsHandler.selectionSort(courseList), globalUI.getRuntime2()); //set runtime2
+            setRuntimeForSorting(algorithmsHandler.quickSort(courseList), globalUI.getRuntime3()); //set runtime3
+            setMemoryUsageForSorting(algorithmsHandler.insertionSort(courseList), globalUI.getMemory1()); //set memory 1
+            setMemoryUsageForSorting(algorithmsHandler.selectionSort(courseList), globalUI.getMemory2()); //set memory 2
+            setMemoryUsageForSorting(algorithmsHandler.quickSort(courseList), globalUI.getMemory3()); //set memory 3
             //set the rest
-            globalUI.setAlgorithm1Results(name1, complexity1, "summary here", "Explanation here");
-            globalUI.setAlgorithm2Results(name2, complexity2, "summary here", "Explanation here");
-            globalUI.setAlgorithm3Results(name3, complexity3, "summary here", "Explanation here");
+            globalUI.setAlgorithm1Results(name1, complexity1, "", "Insertion Sort is a simple comparison-based algorithm that " +
+                    "builds the final sorted array one element at a time. It iterates through the array and inserts each " +
+                    "element into its correct position within the already sorted portion of the array. This process is " +
+                    "repeated until the entire array is sorted.\n\nHow it works: At each iteration, the algorithm picks an element from the unsorted portion and compares it with the elements in the sorted portion (from right to left). It shifts the larger elements one position to the right and inserts the current element in its correct position.\n" +
+                    "\t•\tBest case: O(n) (already sorted array)\n" +
+                    "\t•\tAverage case: O(n^2)\n" +
+                    "\t•\tWorst case: O(n^2)\n" +
+                    "\t•\tSpace Complexity: O(1) (in-place sorting)");
+            globalUI.setAlgorithm2Results(name2, complexity2, "", "Selection Sort is a comparison-based algorithm that divides the array into two parts: the sorted part and the unsorted part. The algorithm repeatedly selects the smallest (or largest) element from the unsorted " +
+                    "part and swaps it with the leftmost unsorted element, moving the boundary of " +
+                    "the sorted part one step to the right.\n\nHow it works: During each iteration, the algorithm scans the unsorted part of the array to find the smallest element, then swaps it with the first element of the unsorted part. This process is repeated for the entire array until all elements are sorted.\n" +
+                    "\t•\tBest case: O(n^2)\n" +
+                    "\t•\tAverage case: O(n^2)\n" +
+                    "\t•\tWorst case: O(n^2)\n" +
+                    "\t•\tSpace Complexity: O(1) (in-place sorting)");
+            globalUI.setAlgorithm3Results(name3, complexity3, "", "Quick Sort is an efficient, " +
+                    "divide-and-conquer algorithm that works by selecting a “pivot” element from the array. " +
+                    "The algorithm partitions the array into two halves, placing elements smaller than the " +
+                    "pivot to its left and larger elements to its right. " +
+                    "This process is repeated recursively on the left and right sub-arrays until the entire array is sorted.\n\nHow it works: A pivot element is chosen, and the array is partitioned into two parts based on the pivot. The pivot is then placed in its correct position. Quick Sort is applied recursively to the sub-arrays to sort them. The algorithm is particularly fast due to its divide-and-conquer nature.\n" +
+                    "\t•\tBest case: O(n \\log n) (when the pivot divides the array evenly)\n" +
+                    "\t•\tAverage case: O(n \\log n)\n" +
+                    "\t•\tWorst case: O(n^2) (when the pivot is the smallest or largest element, causing unbalanced partitions)\n" +
+                    "\t•\tSpace Complexity: O(\\log n) (due to recursion)");
 
         }
         else if(buttonName.equalsIgnoreCase("linkedList")) {
@@ -799,12 +821,13 @@ public class MainController {
      //TODO This method calls the mergeSort function
     private void mergeSort() {}
 
-    private long setRuntimeForSorting(List<Course>sortedList, Label label){
+    //this method implements the calculation of the runtime for all sorting algorithms
+    private void setRuntimeForSorting(List<Course>sortedList, Label label){
         //start time
         long startQuickTime = System.nanoTime();
 
         //call algorithm
-        List<Course> tempList = algorithmsHandler.quickSort(sortedList);
+        List<Course> tempList = sortedList; //do not inline variable, need it for algorithm to work
 
         //end time
         long endQuickTime = System.nanoTime();//end time
@@ -816,7 +839,34 @@ public class MainController {
 
         label.setText(runtime);
 
-        return duration;
+    }
+
+
+    //this method implements the calculation of the memory usage for all sorting algorithms
+    private void setMemoryUsageForSorting(List<Course>sortedCoursesList, Label label){
+
+        Runtime runtimeSort = Runtime.getRuntime();
+
+        // Run garbage collector before measuring to get a clean slate
+        //runtimeSort.gc();
+
+        //Measure memory usage before the algorithm execution
+        long usedMemoryBeforeSort = runtimeSort.totalMemory() - runtimeSort.freeMemory();
+
+        //call algorithm
+        List<Course> temp2List = sortedCoursesList;//do not inline variable, need it for algorithm to work
+
+        //Measure memory usage after the algorithm execution
+        long usedMemoryAfterBinary = runtimeSort.totalMemory() - runtimeSort.freeMemory();
+
+        // Calculate memory usage
+        long memoryUsed =  (usedMemoryAfterBinary - usedMemoryBeforeSort);
+
+        //set string
+        String memory = "Memory usage :  " + memoryUsed + " bytes";
+
+        //update UI
+        label.setText(memory);
     }
 
     //This method shows the result section in the pane when called it.
@@ -901,6 +951,14 @@ public class MainController {
 
     public void setCopyDataTreeMap(TreeMap<String, Course> copyDataTreeMap) {
         this.copyDataTreeMap = copyDataTreeMap;
+    }
+
+    public TextArea getTextArea() {
+        return textArea;
+    }
+
+    public void setTextArea(TextArea textArea) {
+        this.textArea = textArea;
     }
 }
 

@@ -21,7 +21,7 @@ public class MainApplication extends Application {
     public void start(Stage stage) throws Exception {
         int width = (int) Screen.getPrimary().getBounds().getWidth();
         int height = (int) Screen.getPrimary().getBounds().getHeight();
-        FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("main-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("welcome-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), width, height);
         stage.setTitle("Algorithm Testing");
         stage.initStyle(StageStyle.TRANSPARENT);

@@ -116,3 +116,21 @@ choice-box .menu-item:focused > .label {
 .alert-text {
     -fx-text-fill: white;
 }
+
+.welcomeBox {
+
+    -fx-max-width: 400px;
+    -fx-background-color: #cbeae3;
+    -fx-padding: 50px;
+    -fx-border-radius: 15px;
+    -fx-background-radius: 15px;
+    -fx-spacing: 50px;
+}
+
+.welcomeButton {
+    -fx-background-color: green;
+    -fx-font-size: 16px;
+    -fx-min-width: 150px;
+    -fx-text-fill: white;
+
+}

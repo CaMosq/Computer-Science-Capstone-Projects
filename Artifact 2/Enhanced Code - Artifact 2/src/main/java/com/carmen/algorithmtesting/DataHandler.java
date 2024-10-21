@@ -10,6 +10,8 @@
 
 package com.carmen.algorithmtesting;
 
+import com.carmen.algorithmtesting.FXControllers.MainController;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -17,8 +19,14 @@ import java.util.*;
 
 public class DataHandler {
 
+    // Reference to the MainController
+    private final MainController controller;
+
+
     //constructor
-    public DataHandler(){}
+    public DataHandler(MainController controller){
+        this.controller = controller;
+    }
 
     //method to split each line into fields and check for errors in the data format
     Course parseData(String line, int lineNumber) throws Exception {
@@ -32,6 +40,7 @@ public class DataHandler {
         //Validation: each line should have at least 2 parameters
         if(fields.length < 2){
             System.out.println("Error: invalid data format on line: " + lineNumber);
+            controller.getTextArea().setText("Error: invalid data format on line: " + lineNumber);
             throw new Exception("Invalid data format on line: " + lineNumber);
         }
 
@@ -60,6 +69,7 @@ public class DataHandler {
         int lineCounter = 0;
 
         System.out.println("Opening file...");
+        controller.getTextArea().setText("Opening file...");
 
         try{
 
@@ -75,6 +85,7 @@ public class DataHandler {
             //start reading
             if(reader.ready()) {
                 System.out.println("File (" + filePath + " ) opened successfully.\n\n loading data...");
+                controller.getTextArea().setText("Opening file...\nFile (" + filePath + " ) opened successfully.\n\n Loading data...\nData Loaded into data Structure\nStarting test...");
                 //while the file has a line to read
                 while (line != null) {
 

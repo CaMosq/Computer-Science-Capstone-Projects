@@ -327,16 +327,15 @@ public class AlgorithmsHandler {
      * sort a list of objects
      *
      * @param list: a list of courses in this case
-     * @param <T>:  the type parameter
      */
-    public <T extends Comparable<T>> List<T> insertionSort(List<T> list) {
+    public List<Course> insertionSort(List<Course> list) {
         for (int i = 1; i < list.size(); i++) {
-            T key = list.get(i); // The element to be inserted
+            Course key = list.get(i); // The element to be inserted
             int j = i - 1;
 
             // Shift elements of list[0...i-1] that are greater than key to one position ahead
             // of their current position
-            while (j >= 0 && list.get(j).compareTo(key) > 0) {
+            while (j >= 0 && list.get(j).getCourseName().compareTo(key.getCourseName()) > 0) {
                 list.set(j + 1, list.get(j)); // Move the larger element one position to the right
                 j--;
             }
@@ -481,22 +480,21 @@ public class AlgorithmsHandler {
      * sort course data
      *
      * @param list: the list of values to be sorted
-     * @param <T>:  the type of data structure
      * @return the sorted list
      */
-    public <T extends Comparable<T>> List<T> selectionSort(List<T> list) {
+    public List<Course> selectionSort(List<Course> list) {
         int smallestIndex = 0;
         for (int i = 0; i < list.size() - 1; i++) {
             // Find the index of the smallest element in the unsorted portion
             smallestIndex = i;
             for (int j = i + 1; j < list.size(); j++) {
-                if (list.get(j).compareTo(list.get(smallestIndex)) < 0) {
+                if (list.get(j).getCourseName().compareTo(list.get(smallestIndex).getCourseName()) < 0) {
                     smallestIndex = j;
                 }
             }
             // Swap the smallest element with the element at index i
             if (smallestIndex != i) { // Only swap if the smallest element is not already in the correct position
-                T temp = list.get(i);
+                Course temp = list.get(i);
                 list.set(i, list.get(smallestIndex));
                 list.set(smallestIndex, temp);
             }

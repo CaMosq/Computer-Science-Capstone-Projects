@@ -1,0 +1,5 @@
+﻿  BinaryTree.cpp
+C:\Users\YadiWorkStation\SNHU\CS-300\Project Two-2\BinaryTree.cpp(206,25): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\YadiWorkStation\SNHU\CS-300\Project Two-2\BinaryTree.cpp(264): warning C4715: 'BinaryTree::validatePrerequisites': not all control paths return a value
+C:\Users\YadiWorkStation\SNHU\CS-300\Project Two-2\BinaryTree.cpp(393): warning C4715: 'BinaryTree::findACourse': not all control paths return a value
+  Project Two-2.vcxproj -> C:\Users\YadiWorkStation\SNHU\CS-300\Project Two-2\x64\Debug\Project Two-2.exe

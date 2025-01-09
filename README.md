@@ -1,8 +1,3 @@
-# CS-499-computer-science-capstone
-Repository for my computer science capstone course.
-
-
-
 # Capstone Projects Overview
 
 Welcome to my Capstone Projects repository! This collection showcases three distinct software engineering projects that demonstrate a wide range of skills in data structures, algorithms, software development, and databases. Each project is the result of careful design, implementation, and enhancement to meet specific learning outcomes and demonstrate real-world technical expertise. Inside each project folder, you'll find a dedicated README file with detailed instructions on how to set up and test the project.

@@ -1,21 +1,23 @@
+# Grocery Tracker Application
 
-Carmen Mosquera
-CS 499 Computer Science Capstone
-Category : Three - Databases
-Artifact: Grocery Tracker Application 
+- **Developer**: Carmen Mosquera
+- **Course**: CS 499 Computer Science Capstone
+- **Category** : Three - Databases
+- **Artifact**: Grocery Tracker Application 
 
 
+<br>
 
----------- Artifact Overview:
+## Project Overview:
 
 The Grocery Tracker application allows users to track and analyze store sales data, specifically focusing on product sales frequency and trends. This application was built using Java (Spring Boot) for the backend, MySQL for the database, and Angular for the frontend. The application provides features such as adding new products, viewing sales data, and visualizing sales frequency through charts.
 
 
 
 
+<br>
 
-
---------- Prerequisites:
+## Prerequisites:
 
 To run and test the Grocery Tracker application, ensure you have the following tools installed:
 
@@ -30,11 +32,11 @@ To run and test the Grocery Tracker application, ensure you have the following t
 
 
 
+<br>
 
+## Setup Instructions:
 
---------- Setup Instructions:
-
-----Backend (Java Spring Boot):
+   ### Backend (Java Spring Boot):
 
 1. Clone the repository or download the zip file:
    Locate the "Grocery-tracker-backed" folder inside the "enhanced code" folder:	
@@ -64,7 +66,7 @@ To run and test the Grocery Tracker application, ensure you have the following t
      - locations
     	
 
-----Frontend (Angular):
+ ### Frontend (Angular):
 
 1. Navigate to the frontend directory:
    cd ../grocery-tracker-frontend
@@ -83,9 +85,9 @@ To run and test the Grocery Tracker application, ensure you have the following t
 
 
 
+<br>
 
-
-------------- Testing the Application:
+## Testing the Application:
 
 1. Add Products:
    - Navigate to the frontend on 'http://localhost:4200'.
@@ -127,9 +129,9 @@ To run and test the Grocery Tracker application, ensure you have the following t
 
 
 
+<br>
 
-
------------- Troubleshooting:
+## Troubleshooting:
 
 - CORS Issues: If you're getting CORS-related errors in the browser, ensure that the 'WebSecurityConfig' class in your Spring Boot application is correctly set up to allow cross-origin requests.
 

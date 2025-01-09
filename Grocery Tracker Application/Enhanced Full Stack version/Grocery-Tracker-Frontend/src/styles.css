@@ -1,0 +1,160 @@
+/* global styles */
+
+body {
+  margin: 0;
+  background-color: rgb(239, 239, 239);
+}
+/*this is the main wrapper of each component inside main app*/
+.main-wrapper {
+  padding: 10px;
+  margin-left: 150px;
+  /*background-color: #e0e0e0;*/
+  background-color: rgb(239, 239, 239);
+
+  @media (max-width: 768px) {
+    margin-left: 0;
+
+  }
+}
+
+/* //////////////////////////////////////////////buttons*/
+/*delete*/
+.btn-delete {
+  color: #fff;
+  font-size: 13px;
+  width: auto;
+  border-radius: 5px;
+  border: none;
+  margin-left: 20px;
+  background-color: #e70a0a;
+
+  & i {
+    float: left;
+    font-size: 21px;
+    margin-right: 5px;
+  }
+}
+.btn-delete:hover {
+  background-color: #ff0000;
+}
+/*close*/
+.btn-close {
+  min-width: 40px;
+  height: auto;
+  border: 1px solid #d0cece;
+  border-radius: 5px;
+  background-color: white;
+}
+.btn-close:hover  {
+  background-color: #acd8ec;
+}
+
+/*actions*/
+.btn-action {
+  min-width: 70px;
+  height: auto;
+  padding: 5px;
+  border: 1px solid #d0d0d0;
+  border-radius: 3px;
+  background-color: white;
+  cursor: pointer;
+}
+
+
+/*add new*/
+.btn-addNew {
+  /*display: inline-block;*/
+  /*position: relative;*/
+  font-size: 13px;
+  min-width: 50px;
+  height: 45px;
+  border-radius: 5px;
+  border: 1px solid #d7d7d7;
+  /*border-style: none;*/
+  background-color: #f2f9ff;
+  cursor: pointer;
+
+  & i {
+    float: left;
+    font-size: 21px;
+    margin-right: 5px;
+  }
+  & span {
+    float: left;
+    margin-top: 2px;
+  }
+}
+
+.btn-save {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn-save:hover {
+  background-color: #218838;
+}
+.btn-lg {
+  min-width: 150px;
+}
+.btn-edit {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: orange;
+    color: black;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  &:hover {
+    background-color: #e37c00;
+    color: white;
+  }
+}
+
+.return-btn {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #13c3ad;
+  cursor: pointer;
+
+
+}
+
+/* ///////////////////////input fields*/
+/*search box*/
+input[type=text] {
+  padding: 6px;
+  border: 1px solid #ccc;
+  margin-right: 16px;
+  margin-left: 10px;
+  margin-top: -5px;
+  font-size: 17px;
+  min-width: 180px;
+  height: 30px;
+}
+/*select box*/
+select {
+  box-sizing: border-box;
+  padding: 10px 20px;
+  border: 1px solid currentcolor;
+  color: canvastext;
+  background-color: canvas;
+  align-items: center;
+  white-space: pre;
+  -webkit-rtl-ordering: logical;
+  cursor: default;
+  margin: 0 10px 0 10px;
+  height: 35px;
+}
+select, .search-box {
+  border-radius: 5px;
+}
+select:focus {
+  outline: none;
+}

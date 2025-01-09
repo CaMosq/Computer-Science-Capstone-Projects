@@ -1,0 +1,54 @@
+<div class="main-wrapper">
+
+<!--  CHART #1-->
+  <div class="container">
+    <div class="chart-container">
+      <h2>Purchase Frequency</h2>
+      <canvas id="topSellingProductsChart"> </canvas>
+    </div>
+      <div class="summary-container">
+        <h3>Top selling product</h3>
+        <p>This list provides a summary of the chart, highlighting the top 10 best-selling products ranked from the highest to the lowest in sales.</p>
+        <ol>
+          <li *ngFor="let name of productNamesList; let i = index">
+            {{ name }} : {{ quantities[i] }}
+          </li>
+        </ol>
+      </div>
+  </div>
+
+<!--  CHART#2-->
+  <div class="container">
+    <div class="chart-container">
+      <h2>Sales per day</h2>
+      <canvas id="salesByDayChart" width="400" height="400">
+      </canvas>
+    </div>
+    <div class="summary-container">
+      <h3>Total sales per day</h3>
+      <p>This list presents the chart data, showing the total number of products sold each day, ranked from highest to lowest.</p>
+      <ol>
+        <li *ngFor="let date of dates; let i = index">
+          {{ date }} : {{ quantities2[i] }}
+        </li>
+      </ol>
+    </div>
+  </div>
+
+<!--  CHART#3-->
+  <div class="container">
+    <div class="chart-container">
+      <h2>Product categories</h2>
+      <canvas id="topSellingCategoriesChart" width="400" height="400"> </canvas>
+    </div>
+    <div class="summary-container">
+      <h3>Top selling product categories</h3>
+      <p>This list displays the chart data, ranking product categories from highest to lowest, with the top category having the most products sold.</p>
+      <ol>
+        <li *ngFor="let category of categoriesNames; let i = index">
+          {{ category }} : {{ quantities3[i] }}
+        </li>
+      </ol>
+    </div>
+  </div>
+</div>

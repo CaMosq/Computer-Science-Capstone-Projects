@@ -1,0 +1,23 @@
+<div class="main-wrapper">
+  <h2>Store Locations</h2>
+  <div class="location-container">
+    <table class="location-table" *ngFor="let location of locations">
+      <tr>
+        <td>Store Name:</td>
+        <td>{{location.name}}</td>
+      </tr>
+      <tr>
+        <td>Street Address:</td>
+        <td>{{location.address}}</td>
+      </tr>
+      <tr>
+        <td>City:</td>
+        <td>{{location.city}}</td>
+      </tr>
+      <tr>
+        <td>State:</td>
+        <td>{{location.state}}</td>
+      </tr>
+    </table>
+  </div>
+</div>

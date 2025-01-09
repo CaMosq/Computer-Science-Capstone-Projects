@@ -1,0 +1,43 @@
+<div class="main-wrapper">
+
+  <div class="main-category-wrapper">
+
+    <!--    add new category-->
+    <div class="add-category-container">
+      <h2>Add New category</h2>
+      <p class="input-label">Enter the name for the new category below</p>
+      <input type="text" class="search-box" placeholder="Enter new category name" [(ngModel)]="categoryName">
+      <button class="btn-save btn-lg" (click)="addCategory()" > Save </button>
+    </div>
+
+<!--    categories-->
+    <div class="categories-container">
+      <h2>Categories</h2>
+      <table class="cat-table">
+        <thead>
+        <tr>
+          <th>Id</th> <!-- image and username tag here-->
+          <th>Name</th>
+          <th>Total Products</th>
+          <th>Modify</th>
+          <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let category of categories"> <!--(click)="viewUser(user.id)"-->
+          <td>{{ category.id }}</td>
+          <td>{{ category.name }}</td>
+          <td>{{category.products.length}}</td>
+          <td>
+            <button class="btn-action" [routerLink]="['/view-category', category.id]" style="cursor: pointer">Edit</button>
+          </td>
+          <td>
+            <button class="btn-action" (click)="deleteCategory(category.id)" id="del-btn" style="cursor: pointer">Delete</button>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</div>

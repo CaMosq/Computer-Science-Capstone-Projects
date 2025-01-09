@@ -1,0 +1,332 @@
+
+/** ===========================================================================================
+======================================= styling the header ======================================
+===============================================================================================*/
+
+/* styling header wrapper  --------------------- */
+.header-wrapper {
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+/* styling title container  --------------------- */
+.title-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  padding: 10px;
+  margin-bottom: 10px;
+
+}
+
+/*styling title btn-addNew*/
+.btn-addNew:hover {
+  background-color: #25a92c;
+  color: white;
+}
+
+/* /////////////////////// styling notices container  ----------------- */
+
+.add-new-product-container {
+  background-color: white;
+  border-radius: 15px;
+  padding: 20px;
+  max-width: 400px; /* adjust width  */
+  margin: 0 auto; /* center the form horizontally */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* subtle shadow for depth */
+  display: flex;
+  flex-direction: column;
+}
+
+.add-new-product-container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333; /* Darker heading color */
+}
+.btn-close-container{
+  display: flex;
+  flex-direction: column;
+  margin-left: 320px;
+  margin-bottom: 10px;
+}
+
+.btn-close {
+  /*position: absolute;*/
+  top: 20px;
+  right: 20px;
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+.btn-close span {
+  background-color: white;
+  color: red;
+  padding: 10px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+.add-product-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.add-product-form label {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.add-product-form .form-control {
+  padding: 5px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  height: 30px;
+}
+
+.view-product-container {
+  background-color: white;
+  border-radius: 15px;
+  padding: 20px;
+  max-width: 400px; /* adjust width  */
+  margin: 30px auto; /* center the form horizontally */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* subtle shadow for depth */
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.return-wrapper {
+  display: flex;
+  justify-content: center;
+}
+/** ===========================================================================================
+======================================= styling the body ======================================
+===============================================================================================*/
+
+/* styling body wrapper ----------------- */
+.body-wrapper {
+  padding: 10px;
+  margin-bottom: 15px;
+  margin-top: 40px;
+}
+
+/* styling summary container ------------- */
+.summary-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 10px;
+  overflow: hidden;
+
+}
+
+.summary-container span {
+  height: 18px;
+  width: 1px;
+  background-color: #c5c5c5;
+}
+
+/*links*/
+.links-summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+
+}
+
+.summary-link {
+  font-size: 13px;
+}
+
+
+/*input*/
+.input-counter {
+  max-width: 25px;
+  background-color: transparent;
+  border: solid transparent;
+}
+
+
+/* styling action container  ----------------*/
+.actions-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding: 10px;
+  gap: 15px;
+}
+
+
+
+
+/* styling table container  -----------------*/
+.btn-action:hover {
+  background-color: #acd8ec;
+}
+
+/*accordion table*/
+.BITTable {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0 3em 0;
+  padding: 0;
+  position: relative;
+  top: 3px;
+  /*left: 3px;*/
+}
+
+.BITTable-cell {
+  box-sizing: border-box;
+  flex-grow: 1;
+  width: 100%;
+  padding: 0.8em 1.2em;
+  overflow: hidden;
+  list-style: none;
+  margin: -3px 0 0 -3px;
+  background-color: white;
+  border: 3px solid #e2e6e9;
+
+  & label {
+    display: none;
+  }
+}
+
+.user-thumbnail {
+  margin-left: 15px;
+  border-radius: 50%;
+}
+
+/*columns*/
+.BITTable--6cols > .BITTable-cell {
+  width: 16.6%;
+}
+
+/*cells*/
+.BITTable-cell--head {
+  background-color: slategrey;
+  border-color: #5a6673;
+  color: white;
+}
+
+.BITTable-cell--footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  background-color: #b8c0c8;
+  border-color: #a9b3bc;
+}
+
+.btn-action {
+  margin-left: 5px;
+}
+
+/*accordion*/
+.Accordion {
+  position: relative;
+  top: -3px;
+  left: -3px;
+  width: 80vw;
+  margin: 0 0 0.5em 0;
+  padding: 0.6em 0.6em 0.6em 2em;
+  border-radius: 0.5em;
+  text-align: left;
+  border: solid 3px #007676;
+  background-color: darkcyan;
+  font-weight: bold;
+  color: #002525;
+  text-decoration: none;
+  transition: background-color 0.1s;
+  cursor: pointer;
+}
+
+/*hide on desktop*/
+@media all and (min-width: 769px) {
+  .Accordion {
+    display: none;
+  }
+
+  #image-cell span {
+    display: none;
+  }
+}
+
+.Accordion:hover,
+.Accordion:focus {
+  outline: none;
+  filter: contrast(150%);
+}
+
+.Accordion[aria-selected="true"] {
+  margin-bottom: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-width: 0;
+  background: #b3dcdc;
+}
+
+.Accordion:before {
+  content: "+";
+  position: absolute;
+  top: 50%;
+  left: 0.3em;
+  margin-top: -1.14285714em;
+  font-weight: normal;
+  font-size: 2em;
+  line-height: 2em;
+  background-size: 2em 2em;
+}
+
+.Accordion[aria-selected="true"]:before {
+  content: "-";
+}
+
+
+/* /////////////////////responsive design*/
+@media (max-width: 768px) {
+
+  .main-wrapper {
+    margin-left: 0;
+    padding-top: 30px;
+    padding-left: 0;
+    justify-content: flex-start;
+
+  }
+
+  .BITTable--collapse {
+    display: block;
+  }
+
+  .BITTable-cell label {
+    display: block;
+    color: #256088;
+    font-weight: bold;
+  }
+
+  .BITTable--collapse > .BITTable-cell {
+    width: 80vw;
+  }
+
+  .BITTable--collapse > .BITTable-cell--footer {
+    margin-bottom: 1em;
+  }
+
+  #table-header {
+    display: none;
+  }
+
+  .BITTable-cell--head {
+    display: none;
+  }
+
+  .btn-action {
+    margin-left: 15px;
+  }
+
+  overflow-x: hidden;
+
+}

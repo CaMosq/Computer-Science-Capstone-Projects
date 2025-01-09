@@ -1,0 +1,83 @@
+{
+	"textures": [
+		{
+			"image": "samurai.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 2038,
+				"h": 336
+			},
+			"scale": 3,
+			"frames": [
+				{
+					"filename": "RUN.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 2232,
+						"h": 336
+					},
+					"spriteSourceSize": {
+						"x": 103,
+						"y": 223,
+						"w": 2036,
+						"h": 97
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 2036,
+						"h": 97
+					}
+				},
+				{
+					"filename": "ATTACK.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 1395,
+						"h": 336
+					},
+					"spriteSourceSize": {
+						"x": 103,
+						"y": 193,
+						"w": 1216,
+						"h": 127
+					},
+					"frame": {
+						"x": 1,
+						"y": 100,
+						"w": 1216,
+						"h": 127
+					}
+				},
+				{
+					"filename": "IDLE.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 1395,
+						"h": 336
+					},
+					"spriteSourceSize": {
+						"x": 103,
+						"y": 214,
+						"w": 1178,
+						"h": 106
+					},
+					"frame": {
+						"x": 1,
+						"y": 229,
+						"w": 1178,
+						"h": 106
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:b42fa6e1a87cc09849abcc6874ca518b:c08d7fc7f9cc3e6b498c6b37e0c4b66a:2b6b1cfe2e1d275038a31c8bfb7108bf$"
+	}
+}

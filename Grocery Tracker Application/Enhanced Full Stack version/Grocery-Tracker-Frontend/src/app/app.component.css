@@ -1,0 +1,184 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Top Header */
+header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0f4c5c;
+  color: white;
+  height: 70px;
+  width: 100%;
+  padding: 0 20px;
+  z-index: 30;
+}
+
+/* Logo Styling */
+.logo img {
+  height: 50px;
+}
+
+/* Navigation Menu */
+nav ul {
+  display: flex;
+  list-style-type: none;
+}
+
+nav ul li {
+  margin-left: 20px;
+  min-width: 90px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.hamburger {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+/*///////////////////////////// Main Content Area /////////////////////////*/
+/* Main Container (for left sidebar and main content) */
+.container {
+  display: flex;
+  height: calc(100vh - 70px); /* Full height minus the header */
+  width: 100%;
+  background-color: #e0e0e0;
+}
+
+/* /////////////// Left Sidebar */
+.left-sidebar {
+  position: fixed;
+  padding-top: 80px;
+  /*display: none;*/
+  background-color: #0f4c5c;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 120px;
+  height: 100vh;
+  z-index: 20;
+}
+
+.sidebar-btn {
+  min-width: 100px;
+  height: 90px;
+  margin: 20px;
+  color: white;
+  border: solid 1px gray;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius:5px;
+}
+.sidebar-btn-bgr {
+  background-color: rgba(135, 158, 163, 0.55);
+}
+.sidebar-btn:hover {
+  background-color: #e3eff4;
+  color:black;
+}
+.sidebar-btn-active {
+  background-color: #ead781;
+  color: black;
+}
+
+/* /////////////////main*/
+
+main {
+  flex-grow: 1;
+  padding: 20px;
+  margin-top: 30px;
+  background-color: rgb(239, 239, 239);
+  /*background-color: #e0e0e0;*/
+}
+#product-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+#product-list li {
+  background-color: white;
+  margin: 0.5rem 0;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+input, select, button {
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+/* ///////////////////////////////// Responsive Design //////////////////////////// */
+@media (max-width: 768px) {
+
+  header {
+    overflow-x: hidden;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  /* On mobile, make the left sidebar horizontal */
+  .container {
+    flex-direction: column;
+    overflow-x: hidden;
+    justify-content: flex-start;
+  }
+
+  .left-sidebar {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: unset;
+    width: 100%;
+    height: 70px;
+  }
+
+  .sidebar-btn {
+    width: 100%;
+    height: 60px;
+    padding: 10px;
+    margin: 5px;
+  }
+  main {
+    margin-left: 0;
+  }
+
+}
+
+/* ////////desktop*/
+@media (min-width: 769px) {
+  /* On larger screens, keep the sidebar on the left and content beside it */
+  .container {
+    flex-direction: row;
+  }
+
+  main {
+    margin-left: 0;
+
+  }
+}

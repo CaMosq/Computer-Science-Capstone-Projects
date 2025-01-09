@@ -1,0 +1,53 @@
+<!-- Item Collected Pop-up -->
+<div *ngIf="isInventoryCollectedVisible()" class="popup">
+  <div class="popup-content">
+    <h2>Item Collected!</h2>
+    <p>You have collected: {{ collectedItem.name }}</p>
+    <img [src]="'assets/town-items/' + collectedItem?.image_key + '.png'" alt="{{ collectedItem?.name }}" />
+    <button (click)="closePopup()">Close</button>
+  </div>
+</div>
+
+<!-- Item Details Pop-up -->
+<div *ngIf="isItemDetailsVisible()" class="popup">
+  <div class="popup-content">
+    <h2>Item Details</h2>
+    <p><strong>Name:</strong> {{ itemDetails.name }}</p>
+    <p><strong>Description:</strong> {{ itemDetails.description }}</p>
+    <img [src]="'assets/town-items/' + itemDetails.image_key + '.png'" alt="{{ itemDetails.name }}">
+    <button (click)="closePopup()">Close</button>
+  </div>
+</div>
+
+
+<!-- Location Details Pop-up -->
+<div *ngIf="isHouseDetailsVisible()" class="popup">
+  <div class="popup-content">
+    <h2>Location Details</h2>
+    <p><strong>Name:</strong> {{ itemDetails.name }}</p>
+    <p><strong>Description:</strong> {{ itemDetails.description }}</p>
+    <p><strong>Item:</strong></p>
+    <p><strong>Item Name:</strong> {{ itemDetails.item.name }}</p>
+    <p><strong>Item Description:</strong> {{ itemDetails.item.description }}</p>
+    <img [src]="'assets/town-items/' + itemDetails.item.image_key + '.png'" alt="{{ itemDetails.item.name }}">
+    <button (click)="closePopup()">Close</button>
+  </div>
+</div>
+
+
+
+<!--greatBattle consent-->
+<div *ngIf="isFightOrCollectVisible()" id="battle-popup" class="popup">
+  <div class="popup-content">
+    <h2>Do you want to continue to the final battle?</h2>
+    <p>You don't have all the required items yet. Would you like to continue the fight or return to the game to collect the remaining items?</p>
+
+    <div class="popup-buttons">
+      <!-- Button to continue fighting the vampire -->
+      <button (click)="continueBattle()" >Continue to the Battle</button>
+
+      <!-- Button to return to the game to collect items -->
+      <button (click)="collectItems()" >Return to Collect Items</button>
+    </div>
+  </div>
+</div>

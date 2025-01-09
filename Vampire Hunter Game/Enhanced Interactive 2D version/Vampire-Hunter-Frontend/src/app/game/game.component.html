@@ -1,0 +1,47 @@
+<!-- Add the popups component to the gameComponent -->
+<app-popups></app-popups>
+
+
+<div class="container">
+  <!-- Top Section -->
+  <div id="top-panel">
+    <div class="top-section">
+      <h3>Welcome: <span>Carmen</span></h3>
+      <h3>Current Location :<span>{{ currentLocation }}</span></h3>
+      <h3>Collected Items:<span> {{ inventory.length }}</span></h3>
+      <h3>Playing time: <span>06:02:01</span></h3>
+      <h3>Health status: <span>100%</span></h3>
+    </div>
+  </div>
+
+  <div class="main-content">
+    <!-- Left Section -->
+    <div id="left-panel">
+      <ul class="left-section">
+        <li class="grid-item" *ngFor="let item of inventory" (click)="sendSelectedItem(item)">
+          <img [src]="'assets/town-items/' + item.image_key + '.png'" alt="{{item.name}}"/>
+          <span>{{ item.name }}</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Center Section (Canvas) -->
+    <div class="center-section">
+      <div id="game-container"></div>
+    </div>
+
+    <!-- Right Section (Sidebar) -->
+    <div id="right-panel">
+      <div class="right-section">
+        <button id="resume-btn" class="game-button green" hidden="hidden">Resume Game</button>
+        <button id="exit-btn" class="game-button red">Exit Game</button>
+        <button id="town-map-btn" class="game-button blue">Town Map</button>
+        <button id="locations-btn" class="game-button green">Locations</button>
+        <button id="inventory-btn" class="game-button orange">Inventory</button>
+        <button id="instructions-btn" class="game-button blue">Instructions</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+

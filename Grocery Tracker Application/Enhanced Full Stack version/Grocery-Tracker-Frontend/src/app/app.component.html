@@ -1,0 +1,37 @@
+
+<header>
+  <div class="logo">
+    <!--        <img src="assets/logo.png" alt="Logo">-->
+    <h1>Grocery Tracker</h1>
+  </div>
+  <nav>
+    <ul id="menu">
+      <li><a href="#">Home</a></li>
+      <li><a href="#" routerLink="/about" >About</a></li>
+      <li><a href="#" routerLink="/contact" >Contact</a></li>
+      <li><a href="#">Login</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger">
+      &#9776;
+    </div>
+  </nav>
+</header>
+
+<!-- Main container (Left Sidebar + Center Content) -->
+
+<div class="container">
+  <!-- Left Sidebar -->
+  <div class="left-sidebar">
+    <button #sidebarButton class="sidebar-btn sidebar-btn-bgr" id="frequency-btn" routerLink="/" (click)="clickedButton($cast($event.target))">Insights</button>
+    <button #sidebarButton class="sidebar-btn sidebar-btn-bgr" id="product-btn" routerLink="/products" (click)="clickedButton($cast($event.target))">Products</button>
+    <button #sidebarButton class="sidebar-btn sidebar-btn-bgr" id="categories-btn" routerLink="/categories" (click)="clickedButton($cast($event.target))">Categories</button>
+    <button #sidebarButton class="sidebar-btn sidebar-btn-bgr" id="login-btn" routerLink="/locations" (click)="clickedButton($cast($event.target))">Locations</button>
+  </div>
+
+
+  <!-- Main Content Area -->
+  <main>
+    <router-outlet />
+  </main>
+</div>
+

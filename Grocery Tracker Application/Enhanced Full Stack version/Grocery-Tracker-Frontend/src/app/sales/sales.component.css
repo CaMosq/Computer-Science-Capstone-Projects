@@ -1,0 +1,50 @@
+.container {
+  display: flex;                /* Enable flexbox */
+  justify-content: space-between; /* Ensure space between the two divs */
+  align-items: flex-start;       /* Align items at the top */
+  margin: 20px;                 /* Add some margin for spacing */
+  border: 1px solid #dad8d8;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 1px 1px 1px #939292;
+}
+
+.chart-container {
+  width: 60%;                   /* Make the chart container 60% of the width */
+  padding-right: 20px;          /* Add some padding on the right for spacing */
+}
+
+.summary-container {
+  width: 35%;                   /* Make the summary container 35% of the width */
+  padding-left: 20px;           /* Add padding on the left for spacing */
+}
+
+.summary-container p {
+  font-size: 16px;              /* Set the font size of the summary paragraph */
+  line-height: 1.6;             /* Set the line height for better readability */
+}
+.summary-container ol {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+canvas {
+  max-width: 100%;              /* Ensure the canvas takes full width of its container */
+}
+
+/* /////////////////////////Responsive style*/
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;    /* Stack the two divs vertically on smaller screens */
+    padding-top: 40px;
+  }
+
+  .chart-container, .summary-container {
+    width: 100%;               /* Make each container take full width */
+    padding: 0;                /* Remove any padding */
+  }
+
+  .chart-container {
+    margin-bottom: 20px;       /* Add some space between the chart and summary */
+  }
+}

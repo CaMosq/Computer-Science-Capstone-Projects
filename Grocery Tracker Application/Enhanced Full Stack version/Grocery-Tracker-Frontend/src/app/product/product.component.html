@@ -1,0 +1,140 @@
+<div class="main-wrapper" xmlns="http://www.w3.org/1999/html">
+  <!--  HEADER SECTION-->
+  <div class="header-wrapper">
+
+    <!--    title-->
+    <div class="title-container">
+      <h1>Products</h1>
+      <button class="btn-addNew" type="button" (click)="toggleAddProduct()"><span>Add New Product</span></button><div class="fake-border left"></div>
+    </div>
+
+    <!--   ////////////// toggle container-->
+    <div class="notices-container" *ngIf="showAddProduct">
+      <div class="btn-close-container">
+        <button type="button" class="btn-close" id="close" (click)="toggleAddProduct()" > <span> X </span></button>
+      </div>
+      <add-product (productAddedEvent)="onProductCreated()"></add-product>
+  </div>
+
+  <!--  END HEADER-->
+
+
+  <!--  BODY SECTION-->
+  <div class="body-wrapper" >
+
+    <!--    actions-->
+    <div class="actions-section">
+      <!--      filter-->
+      <form  novalidate class="form-filter">
+        <label for="category">Filter by Category</label>
+        <select name="category" id="category" [(ngModel)]="category">
+          <option selected="selected"></option>
+          <option value="meat">Meat</option>
+          <option value="dairy">Dairy</option>
+          <option value="produce">Produce</option>
+          <option value="household">Household</option>
+          <option value="baby">Baby</option>
+          <option value="breakfast">Breakfast</option>
+        </select>
+      </form>
+      <form  novalidate class="form-filter">
+        <label for="location">Filter by Location</label>
+        <select name="location" id="location" [(ngModel)]="location">
+          <option selected="selected"></option>
+          <option value="store a">Store A</option>
+          <option value="store b">Store B</option>
+          <option value="store c">Store C</option>
+          <option value="store d">Store D</option>
+          <option value="store e">Store E</option>
+        </select>
+      </form>
+
+      <!--      searchBox-->
+      <div class="searchBox-section" >
+        <label for="productName">Search Product</label >
+        <input type="text" name="productName" id="productName" class="search-box" placeholder="Enter product name"  [(ngModel)]="itemName">
+      </div>
+
+    </div>
+
+    <!--    summary-->
+    <div class="summary-container">
+      <div class="links-summary">
+        <p class="summary-link">All ({{totalProducts}}) </p><span></span>
+        <p class="summary-link">Los Angeles ({{countLA}}) </p><span></span>
+        <p class="summary-link">New York ({{countNY}}) </p><span></span>
+        <p class="summary-link">Chicago ({{countCHI}}) </p><span></span>
+        <p  class="summary-link">Miami ({{countMIA}}) </p><span></span>
+        <p  class="summary-link">Atlanta ({{countATL}}) </p>
+      </div>
+    </div>
+
+    <!--    table-->
+    <div class="BITTable BITTable--6cols BITTable--collapse BIT-Accordion" id="table-header">
+      <div class="BITTable-cell  BITTable-cell--footer"><strong>Product</strong></div>
+      <div class="BITTable-cell  BITTable-cell--footer"><strong>Name</strong></div>
+      <div class="BITTable-cell  BITTable-cell--footer"><strong>Category</strong></div>
+      <div class="BITTable-cell  BITTable-cell--footer"><strong>Price</strong></div>
+      <div class="BITTable-cell  BITTable-cell--footer"><strong>Quantity</strong></div>
+      <div class="BITTable-cell  BITTable-cell--footer"><strong>Location</strong></div>
+    </div>
+
+    <div class="BITTable BITTable--6cols BITTable--collapse BIT-Accordion" id="mobile-table"
+         *ngFor="let product of products  | tableFilter: {category: category, region: location, name: itemName}">
+
+      <button class="Accordion " role="tab" aria-selected="true"  >{{product.productName}}</button>
+      <div class="BITTable-cell  BITTable-cell--head " ><h3>{{product.productName}}</h3></div>
+      <div class="BITTable-cell " id="image-cell"> <label>Name: </label><span>{{product.productName}}</span>
+        <img class="product-thumbnail" [src]="product.imageUrl"  alt="{{product.productName}}" width="80px" height="80px">
+      </div>
+      <div class="BITTable-cell"><label>Category: </label> {{product.productCategory.name}}</div>
+      <div class="BITTable-cell"><label>Price: </label> {{product.productPrice}}</div>
+      <div class="BITTable-cell"><label>Quantity: </label> {{product.stockQuantity}}</div>
+      <div class="BITTable-cell"><label>Location: </label> {{product.location.name}}</div>
+      <div class="BITTable-cell  BITTable-cell--footer">
+        <strong>
+          <button class="btn-action" [routerLink]="['/view-product', product.productId]" >View</button>
+          <button class="btn-action" [routerLink]="['/view-product', product.productId]">Edit</button>
+          <button class="btn-action" (click)="deleteProduct(product.productId)" >Delete</button>
+        </strong>
+      </div>
+    </div>
+
+    <div class="table-container">
+
+      <!--    actions-->
+      <div class="actions-section">
+        <!--      filter-->
+        <form  novalidate class="form-filter">
+          <label for="category">Filter category</label>
+          <select name="category" [(ngModel)]="category">
+            <option selected="selected"></option>
+            <option value="meat">Meat</option>
+            <option value="dairy">Dairy</option>
+            <option value="produce">Produce</option>
+            <option value="household">Household</option>
+            <option value="baby">Baby</option>
+            <option value="breakfast">Breakfast</option>
+
+          </select>
+        </form>
+        <form  novalidate class="form-filter">
+          <label for="location">Filter by Location</label>
+          <select name="location"  [(ngModel)]="location">
+            <option selected="selected"></option>
+            <option value="store a">Store A</option>
+            <option value="store b">Store B</option>
+            <option value="store c">Store C</option>
+            <option value="store d">Store D</option>
+            <option value="store e">Store E</option>
+          </select>
+        </form>
+    </div>
+  </div>
+  <!--  END BODY-->
+
+</div>
+<!--  END MAIN WRAPPER-->
+
+</div>
+</div>

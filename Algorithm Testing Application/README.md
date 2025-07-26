@@ -59,7 +59,8 @@ Pull requests are welcome! If you’d like to suggest improvements or expand the
 
 ## 📫 Contact
 Created by Carmen
-📬 My Email: carmen.mossq@gmail.com
-🔗 [LinkedIn](https://www.linkedin.com/in/carmen-mosquera-mo/)
-🌐 [Portfolio Website](https://carmenmosq.com)
+
+- 📬 carmen.mossq@gmail.com
+- 🔗 [LinkedIn](https://www.linkedin.com/in/carmen-mosquera-mo/)
+- 🌐 [Portfolio Website](https://carmenmosq.com)
 

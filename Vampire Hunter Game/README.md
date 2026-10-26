@@ -1,4 +1,13 @@
 # Vampire Hunter Game
+- **Developer:** Carmen Mosquera
+- **Category:** Full Stack Software development
+- **Course:** CS 499 Computer Science Capstone
+- **Artifact:** From a text-base python game to a full interactive 2D adventure game.
+
+  <br>
+
+
+# Vampire Hunter Game
 The vampire hunter game is a text-based adventure game written in Python where players explore a small village to collect eight specific items needed to defeat a vampire living in a mansion. The enhanced version transformed the game into an interactive 2D adventure that incorporates various gameplay elements, including item collection, combat with the vampire, and a dynamic user interface with an interactive map, inventory system, location descriptions, item descriptions and player stats. This artifact originates from course IT 140 Introduction to scripting.
 
 
@@ -60,5 +69,15 @@ I implemented the following enhancements to my text-based game:
 		- Items can be collected, and a pop-up appears with item details.
 		- The collected items are properly updated in the player’s inventory.
 		- When the player reaches the final scene, a decision to continue fighting the vampire or return to collect more items is presented.
+
+
+  <br>
+  
+## 📫 Contact
+Created by Carmen
+
+- 📬 carmen@agubit.com
+- 🔗 [LinkedIn](https://www.linkedin.com/in/carmen-mosquera-mo/)
+- 🌐 [Portfolio Website](https://carmenmosq.com)
 
 

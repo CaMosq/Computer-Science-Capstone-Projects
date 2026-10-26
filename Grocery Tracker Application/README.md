@@ -147,3 +147,13 @@ To run and test the Grocery Tracker application, ensure you have the following t
 ## Conclusion:
 
 Once set up, you should be able to fully test the Grocery Tracker application, including adding products, recording sales, and viewing data visualizations. For any issues or further clarifications, feel free to reach out.
+
+<br>
+
+## 📫 Contact
+Created by Carmen
+
+- 📬 carmen@agubit.com
+- 🔗 [LinkedIn](https://www.linkedin.com/in/carmen-mosquera-mo/)
+- 🌐 [Portfolio Website](https://carmenmosq.com)
+

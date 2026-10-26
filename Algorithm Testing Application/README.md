@@ -60,7 +60,7 @@ Pull requests are welcome! If you’d like to suggest improvements or expand the
 ## 📫 Contact
 Created by Carmen
 
-- 📬 carmen.mossq@gmail.com
+- 📬 carmen@agubit.com
 - 🔗 [LinkedIn](https://www.linkedin.com/in/carmen-mosquera-mo/)
 - 🌐 [Portfolio Website](https://carmenmosq.com)
 
